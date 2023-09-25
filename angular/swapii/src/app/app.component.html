@@ -1,0 +1,20 @@
+<h1>Pokemon</h1>
+
+<ul>
+  <li *ngFor="let poke of pokemon">
+    <h3>{{poke.name}}</h3>
+    <button (click)="loadPokemon(poke.url)"> Load Pokemon</button>
+  </li>
+  <div *ngFor="let poke of selectedPokemon">
+    <h3>Ability: {{poke.ability.name}}</h3>
+    <button (click)="loadItems(poke.ability.url)"> Load Ability</button>
+  
+  </div>
+</ul>
+<div *ngFor="let item of selectedItem">
+  <h3>Effect: {{item.effect}}</h3>
+
+
+</div>
+
+<router-outlet></router-outlet>

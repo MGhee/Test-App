@@ -1,0 +1,16 @@
+<p>to-do works!</p>
+<input type="text" [(ngModel)]="newItem" (keydown.enter)="addIteem()">
+<button (click)="addIteem()">Submit</button>
+<button>Update</button>
+
+
+
+<ul>
+    <li *ngFor="let item of items, let i = index">
+        {{item}}
+        <button (click)="removeItem(i)">Remove</button>
+        <button (click)="editItem(i)">Edit</button>
+        <input type="text" [(ngModel)]="editItems">
+    </li>
+    
+</ul>

@@ -1,0 +1,10 @@
+<h1>Image picker</h1>
+<div>
+    <label for="imageUrl">Please inserrt you image Url:</label>
+    <input id="imageUrl" type="text"  [(ngModel)]= "imageUrl">
+    <button type="submit" (click)="onSubmit()">Submit</button>
+</div>
+<div *ngIf="imageSource">
+    <img [src]="imageSource" alt="User input image">
+
+</div>

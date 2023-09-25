@@ -1,0 +1,63 @@
+body{
+	margin: 0;
+}
+.container{
+	width:1200px;
+	margin: 0 auto;
+}
+.linear{
+	border: 2px solid #F50057;
+	background-color: #F50057;
+	margin:70px 120px;
+	padding: 100px 50px;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	height: 500px;
+}
+.linear .linear-lines{
+	border: 3px solid #26C6DA;
+	background-color: #26C6DA;
+	border-radius: 40px;
+	height: 300px;
+	width: 5px;
+	display: inline-block;
+	margin-right: 120px;
+}
+.linear .linear-lines.last{
+	margin-right: 0;
+}
+.linear .half{
+	height: 150px;
+	margin-bottom: -150px;
+}
+.linear .linear-lines.reduce{
+	animation: 2s infinite alternate reduce;
+	/*transform-origin: top;*/
+}
+.linear .linear-lines.half.increase{
+	animation: 2s infinite alternate increase;
+	/*transform-origin: bottom;*/
+}
+
+
+
+
+@keyframes reduce{
+	from{ 
+		transform: scale(1,1);
+	 }
+	 to{
+	 	transform: scale(1, 0.5);
+	 }
+}
+@keyframes increase{
+	from{
+		transform: scale(1,1);
+
+	}
+	to{
+		transform: scale(1,2);
+	}
+}

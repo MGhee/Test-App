@@ -1,0 +1,12 @@
+<nav>
+    <ul>
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/newimage">Image</a></li>
+        <li><a routerLink="/todo">To Do List</a></li>
+        <li><a routerLink="/dice">Dice</a></li>
+        <li><a routerLink="/calculator">Calculator</a></li>
+        <li *ngIf="isAuthenticated"><a routerLink="/profile">Profile</a></li>
+        <li *ngIf="isAuthenticated"><a routerLink="/profile/settings">Settings</a></li>
+        <li><a routerLink="/piping">Piping</a></li>
+    </ul>
+</nav>

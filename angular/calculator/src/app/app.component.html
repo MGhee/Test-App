@@ -1,0 +1,36 @@
+
+<div class="display-container">
+  <p class="casio">CASIO</p>
+  <div class="solar">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <span class="model"><i>fx</i>-85MS</span>
+</div>
+<div> <input class="display" type="text" [value]="currentNumber"></div>
+<div>
+  <button (click)="getNr(' + ')">+</button>
+  <button (click)="getNr(' - ')">-</button>
+  <button (click)="getNr(' / ')">/</button>
+  <button (click)="getNr(' * ')">*</button>
+</div>
+<div class="number-container calc-container">
+  <button (click)="getNr('1')">1</button>
+  <button (click)="getNr('2')">2</button>
+  <button (click)="getNr('3')">3</button>
+  <button (click)="doIt()">=</button>
+  <br>
+  <button (click)="getNr('4')">4</button>
+  <button (click)="getNr('5')">5</button>
+  <button (click)="getNr('6')">6</button>
+  <button (click)="clear()">AC</button>
+  <br>
+  <button (click)="getNr('7')">7</button>
+  <button (click)="getNr('8')">8</button>
+  <button (click)="getNr('9')">9</button>
+  <button (click)="getNr('0')">0</button>
+</div>
+
+<router-outlet></router-outlet>
