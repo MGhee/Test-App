@@ -1,0 +1,17 @@
+<h1>ToDo Application</h1>
+
+<input type="text" [(ngModel)]="newItem" (keydown.enter)="addIteem()">
+<button (click)="addIteem()">Submit</button>
+
+
+
+
+
+<ul>
+    <li *ngFor="let item of items, let i = index">
+        {{item}} <button (click)="removeItem(i) ">Remove</button>
+    </li>
+</ul>
+
+<router-outlet></router-outlet>
+
